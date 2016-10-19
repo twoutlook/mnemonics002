@@ -1,0 +1,36 @@
+# https://tutorial.djangogirls.org/en/deploy/
+*.pyc
+__pycache__
+myvenv
+
+# Noted by Mark,
+# even for development, 
+# simply copy and paste db.sqlite3
+# db.sqlite3
+
+# 正常是要在正式環境執行
+# python manage.py collectstatic
+# 反正可以直接使用，有問題再執上述指令，github 上傳無妨 
+# 注意：如果設置錯誤，可能app001/static沒有納入版本控制
+; /static
+; mysite/static
+
+
+.DS_Store
+
+
+
+
+# following is for Java
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
