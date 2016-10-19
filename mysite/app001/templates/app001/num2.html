@@ -1,0 +1,33 @@
+{% extends 'app001/base.html' %}
+
+
+{% block content %}
+
+<h1>num2</h1>
+
+<h1>各式名稱</h1>
+{% for item in item_list %}
+    {% if item.num2 == 0 %}
+    <!--不顯示 13-00-00-->
+    
+    {% else %}
+
+        {% if item.num3 == 0 %}
+            {{ item.num2|stringformat:"02d" }}{{ item.data|cut:'〓'  }}<br>
+            <!-- <hr> -->
+        {% endif %}
+    {% endif %}
+
+{% endfor %}
+
+<h1>口訣</h1>
+{% for item in item_list %}
+    {% if item.num3 == 0 %}
+        <hr>
+    {% endif %}
+    {{ item.num1|stringformat:"02d" }}-{{ item.num2|stringformat:"02d" }}-{{ item.num3|stringformat:"02d" }} &nbsp;
+    {{ item.data }} <br>
+{% endfor %}
+<hr>
+
+{% endblock %}
