@@ -1,0 +1,28 @@
+{% extends 'app001/base.html' %}
+
+
+{% block content %}
+
+
+
+<h1>debug index</h1>
+{% for item in item_list %}
+    {% if item.num3 == 0 %}
+        {{ item.num2|stringformat:"02d" }}
+        {{ item.data|cut:'〓'  }}<br>
+        <!-- <hr> -->
+    {% endif %}
+
+{% endfor %}
+
+<h1>十九式口訣</h1>
+{% for item in item_list %}
+    {% if item.num3 == 0 %}
+        <hr>
+    {% endif %}
+    {{ item.num1|stringformat:"02d" }}-{{ item.num2|stringformat:"02d" }}-{{ item.num3|stringformat:"02d" }} &nbsp;
+    {{ item.data }} <br>
+{% endfor %}
+<hr>
+
+{% endblock %}
