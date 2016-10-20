@@ -3,15 +3,13 @@
 
 {% block content %}
 
-<h1>num3</h1>
+<h1>num2</h1>
 
 <h1>各式名稱</h1>
 {% for item in item_list %}
-    {% if item.num3 == 0 %}
+    {% if item.num2 == 0 %}
     <!--不顯示 13-00-00-->
-     <h3> {{ num1}}</h3>
-     <h3> {{ num2}}</h3>
-     <h3> {{ item.data}}</h3>
+    
     {% else %}
 
         {% if item.num3 == 0 %}

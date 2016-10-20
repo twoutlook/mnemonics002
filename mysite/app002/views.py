@@ -14,7 +14,7 @@ def index(request):
     # if not request.user.is_authenticated:
     #      return redirect('/')
     item_list = Mnemonics.objects.filter(num1=19).order_by('num2', 'num2')[:3000]
-    context = {'current_user':request.user,'page_title':'十九式','item_list': item_list}
+    context = {'current_user':request.user,'page_title':'xxxapp002 index','item_list': item_list}
     return render(request, 'app001/index.html', context)
     
     

@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'import_export',
     'app001',
+    'app002',
     
     'django.contrib.admin',
     'django.contrib.auth',

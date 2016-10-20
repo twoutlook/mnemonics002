@@ -3,26 +3,19 @@
 
 {% block content %}
 
-<h1>num3</h1>
 
-<h1>各式名稱</h1>
+
+<h1>debug index</h1>
 {% for item in item_list %}
     {% if item.num3 == 0 %}
-    <!--不顯示 13-00-00-->
-     <h3> {{ num1}}</h3>
-     <h3> {{ num2}}</h3>
-     <h3> {{ item.data}}</h3>
-    {% else %}
-
-        {% if item.num3 == 0 %}
-            {{ item.num2|stringformat:"02d" }}{{ item.data|cut:'〓'  }}<br>
-            <!-- <hr> -->
-        {% endif %}
+        {{ item.num2|stringformat:"02d" }}
+        {{ item.data|cut:'〓'  }}<br>
+        <!-- <hr> -->
     {% endif %}
 
 {% endfor %}
 
-<h1>口訣</h1>
+<h1>十九式口訣</h1>
 {% for item in item_list %}
     {% if item.num3 == 0 %}
         <hr>
